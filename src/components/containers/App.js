@@ -1,18 +1,17 @@
 import React from 'react';
-import MusikPlayer from './MusikPlayer';
+import WbnPlayer from './WbnPlayer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import GlobaStyle from '../styles/GlobalStyle';
+import GlobalStyle from '../styles/GlobalStyle';
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/react_videoplayer/">
+  <>
     <Switch>
-
-      <Route exact path='/' component={ MusikPlayer } />
-      <Route exact path='/:activeVideo' component={ MusikPlayer } />
-      
+      <Route exact path="/" component={WbnPlayer} />
+      <Route exact path="/:activeVideo" component={WbnPlayer} />
     </Switch>
-
-    <GlobaStyle />
+    <GlobalStyle />
+  </>
   </BrowserRouter>
 )
 
